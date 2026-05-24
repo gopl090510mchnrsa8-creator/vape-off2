@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="VAPE OFF — campaña interactiva de concientización sobre los peligros del vapeo en jóvenes." />
+  <title>VAPE OFF · Cada inhalación deja una marca</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Inter:wght@300;400;500;600;800&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============================================== -->
+  <!-- LOADER                                          -->
+  <!-- ============================================== -->
+  <div class="loader" id="loader">
+    <div class="loader__ring"></div>
+    <p class="loader__text">CARGANDO EXPERIENCIA</p>
+  </div>
+
+  <!-- ============================================== -->
+  <!-- BACKGROUND FX                                   -->
+  <!-- ============================================== -->
+  <div class="bg-fx" aria-hidden="true">
+    <div class="bg-fx__grid"></div>
+    <div class="bg-fx__orb bg-fx__orb--green"></div>
+    <div class="bg-fx__orb bg-fx__orb--purple"></div>
+    <div class="bg-fx__orb bg-fx__orb--blue"></div>
+    <div class="bg-fx__noise"></div>
+  </div>
+
+  <!-- ============================================== -->
+  <!-- NAVBAR                                          -->
+  <!-- ============================================== -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#hero" class="nav__brand">
+        <span class="nav__logo">
+          <i class="fa-solid fa-lungs"></i>
+        </span>
+        <span class="nav__brand-text">VAPE<span>OFF</span></span>
+      </a>
+
+      <nav class="nav__menu" id="navMenu" aria-label="Menú principal">
+        <a href="#hero" class="nav__link is-active">Inicio</a>
+        <a href="#contiene" class="nav__link">¿Qué contiene?</a>
+        <a href="#riesgos" class="nav__link">Riesgos</a>
+        <a href="#efectos" class="nav__link">Efectos</a>
+        <a href="#juego" class="nav__link">Juego</a>
+        <a href="#ranking" class="nav__link">Ranking</a>
+        <a href="#reflexion" class="nav__link">Reflexión</a>
+      </nav>
+
+      <button class="nav__burger" id="navBurger" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============================================== -->
+    <!-- 1. HERO                                          -->
+    <!-- ============================================== -->
+    <section id="hero" class="hero">
+      <div class="hero__lines" aria-hidden="true">
+        <span></span><span></span><span></span><span></span><span></span>
+      </div>
+
+      <div class="hero__content">
+        <span class="hero__tag reveal">
+          <span class="dot"></span> CAMPAÑA DE CONCIENTIZACIÓN · 2025
+        </span>
+
+        <h1 class="hero__title reveal">
+          <span class="glitch" data-text="EL VAPE">EL VAPE</span>
+          <span class="hero__title-sub">no es un juego…<br/>hasta que <em>juegas contra</em> sus consecuencias.</span>
+        </h1>
+
+        <p class="hero__lead reveal">
+          Una experiencia interactiva para entender lo que <strong>realmente</strong> respiras
+          cuando crees que solo es <span class="hl">vapor</span>.
+        </p>
+
+        <div class="hero__cta reveal">
+          <a href="#contiene" class="btn btn--primary">
+            <i class="fa-solid fa-play"></i> COMENZAR
+          </a>
+          <a href="#juego" class="btn btn--ghost">
+            <i class="fa-solid fa-gamepad"></i> Ir al juego
+          </a>
+        </div>
+
+        <div class="hero__chips reveal">
+          <span class="chip"><i class="fa-solid fa-virus"></i> +30 químicos tóxicos</span>
+          <span class="chip"><i class="fa-solid fa-brain"></i> Daño cerebral en jóvenes</span>
+          <span class="chip"><i class="fa-solid fa-heart-pulse"></i> Adicción rápida</span>
+        </div>
+      </div>
+
+      <!-- Scroll indicator -->
+      <a href="#contiene" class="scroll-ind" aria-label="Bajar">
+        <span class="scroll-ind__mouse"><span></span></span>
+        <span class="scroll-ind__txt">scroll</span>
+      </a>
+    </section>
+
+
+    <!-- ============================================== -->
+    <!-- 2. ¿QUÉ CONTIENE?                                -->
+    <!-- ============================================== -->
+    <section id="contiene" class="section">
+      <div class="section__head reveal">
+        <span class="section__kicker">01 / Composición</span>
+        <h2 class="section__title">¿Qué hay <span class="grad-green">dentro</span> de un vape?</h2>
+        <p class="section__lead">
+          No es solo "sabor a fresa". Cada cartucho mezcla sustancias que, al calentarse,
+          liberan compuestos que tu cuerpo nunca debería respirar.
+        </p>
+      </div>
+
+      <div class="cards-grid">
+        <article class="card reveal" data-color="green">
+          <div class="card__icon"><i class="fa-solid fa-flask-vial"></i></div>
+          <h3 class="card__title">Nicotina</h3>
+          <p class="card__text">Altamente adictiva. Una sola cápsula puede equivaler a 20 cigarrillos.</p>
+          <div class="bar"><span style="--w:92%"></span></div>
+          <small class="card__meta">Nivel adictivo · Muy alto</small>
+        </article>
+
+        <article class="card reveal" data-color="purple">
+          <div class="card__icon"><i class="fa-solid fa-atom"></i></div>
+          <h3 class="card__title">Metales pesados</h3>
+          <p class="card__text">Plomo, níquel y cromo desprendidos de la bobina al calentarse.</p>
+          <div class="bar"><span style="--w:78%"></span></div>
+          <small class="card__meta">Toxicidad · Alta</small>
+        </article>
+
+        <article class="card reveal" data-color="blue">
+          <div class="card__icon"><i class="fa-solid fa-droplet"></i></div>
+          <h3 class="card__title">Propilenglicol</h3>
+          <p class="card__text">Genera formaldehído al vaporizarse, un compuesto cancerígeno.</p>
+          <div class="bar"><span style="--w:70%"></span></div>
+          <small class="card__meta">Riesgo · Cancerígeno</small>
+        </article>
+
+        <article class="card reveal" data-color="red">
+          <div class="card__icon"><i class="fa-solid fa-fire-flame-curved"></i></div>
+          <h3 class="card__title">Diacetilo</h3>
+          <p class="card__text">Saborizante químico asociado al "pulmón de palomitas".</p>
+          <div class="bar"><span style="--w:84%"></span></div>
+          <small class="card__meta">Daño pulmonar · Severo</small>
+        </article>
+
+        <article class="card reveal" data-color="green">
+          <div class="card__icon"><i class="fa-solid fa-radiation"></i></div>
+          <h3 class="card__title">Partículas ultrafinas</h3>
+          <p class="card__text">Penetran profundo en alvéolos y pasan al torrente sanguíneo.</p>
+          <div class="bar"><span style="--w:88%"></span></div>
+          <small class="card__meta">Penetración · Crítica</small>
+        </article>
+
+        <article class="card reveal" data-color="purple">
+          <div class="card__icon"><i class="fa-solid fa-skull-crossbones"></i></div>
+          <h3 class="card__title">Compuestos orgánicos volátiles</h3>
+          <p class="card__text">Benceno, tolueno y otros vinculados a daño neurológico.</p>
+          <div class="bar"><span style="--w:75%"></span></div>
+          <small class="card__meta">Toxicidad · Alta</small>
+        </article>
+      </div>
+    </section>
+
+
+    <!-- ============================================== -->
+    <!-- 3. RIESGOS — pulmones + barras de daño          -->
+    <!-- ============================================== -->
+    <section id="riesgos" class="section section--alt">
+      <div class="section__head reveal">
+        <span class="section__kicker">02 / Riesgos físicos</span>
+        <h2 class="section__title">Cada inhalación <span class="grad-red">deja una marca</span></h2>
+        <p class="section__lead">
+          Tu cuerpo no está diseñado para procesar vapor químico. Estos son los daños que
+          se acumulan, en silencio, cada vez que vapeas.
+        </p>
+      </div>
+
+      <div class="risks">
+        <!-- LUNG VISUAL -->
+        <div class="risks__lung reveal">
+          <svg viewBox="0 0 400 420" class="lung-svg" aria-hidden="true">
+            <defs>
+              <linearGradient id="lgGrad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#00ff9d" stop-opacity=".25"/>
+                <stop offset="100%" stop-color="#ff3860" stop-opacity=".55"/>
+              </linearGradient>
+              <radialGradient id="lgGlow" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#b14bff" stop-opacity=".5"/>
+                <stop offset="100%" stop-color="#b14bff" stop-opacity="0"/>
+              </radialGradient>
+            </defs>
+
+            <!-- glow -->
+            <circle cx="200" cy="220" r="180" fill="url(#lgGlow)"/>
+
+            <!-- traquea -->
+            <path d="M195 40 L195 130 Q195 160 175 175 M205 40 L205 130 Q205 160 225 175"
+                  stroke="#00d9ff" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <rect x="186" y="30" width="28" height="18" rx="4" fill="none" stroke="#00d9ff" stroke-width="3"/>
+
+            <!-- left lung -->
+            <path class="lung-path lung-path--left"
+                  d="M170 165 Q90 175 75 280 Q70 360 140 380 Q180 385 185 330 Q190 250 180 200 Z"
+                  fill="url(#lgGrad)" stroke="#ff3860" stroke-width="2.5"/>
+            <!-- right lung -->
+            <path class="lung-path lung-path--right"
+                  d="M230 165 Q310 175 325 280 Q330 360 260 380 Q220 385 215 330 Q210 250 220 200 Z"
+                  fill="url(#lgGrad)" stroke="#ff3860" stroke-width="2.5"/>
+
+            <!-- damaged spots -->
+            <circle class="spot" cx="125" cy="270" r="8" fill="#ff3860"/>
+            <circle class="spot" cx="105" cy="320" r="5" fill="#ff3860"/>
+            <circle class="spot" cx="155" cy="340" r="6" fill="#ff3860"/>
+            <circle class="spot" cx="275" cy="270" r="7" fill="#ff3860"/>
+            <circle class="spot" cx="295" cy="330" r="5" fill="#ff3860"/>
+            <circle class="spot" cx="245" cy="345" r="6" fill="#ff3860"/>
+          </svg>
+          <div class="risks__lung-tag">
+            <span class="dot dot--red"></span> Tejido afectado
+          </div>
+        </div>
+
+        <!-- BARRAS DE DAÑO -->
+        <div class="risks__bars">
+          <div class="dmg reveal">
+            <div class="dmg__head">
+              <span><i class="fa-solid fa-lungs"></i> Capacidad pulmonar</span>
+              <strong>-38%</strong>
+            </div>
+            <div class="dmg__bar"><span style="--w:62%"></span></div>
+          </div>
+
+          <div class="dmg reveal">
+            <div class="dmg__head">
+              <span><i class="fa-solid fa-heart-pulse"></i> Salud cardiovascular</span>
+              <strong>-29%</strong>
+            </div>
+            <div class="dmg__bar"><span style="--w:71%"></span></div>
+          </div>
+
+          <div class="dmg reveal">
+            <div class="dmg__head">
+              <span><i class="fa-solid fa-brain"></i> Desarrollo cerebral (en jóvenes)</span>
+              <strong>-44%</strong>
+            </div>
+            <div class="dmg__bar"><span style="--w:56%"></span></div>
+          </div>
+
+          <div class="dmg reveal">
+            <div class="dmg__head">
+              <span><i class="fa-solid fa-tooth"></i> Salud bucal y encías</span>
+              <strong>-22%</strong>
+            </div>
+            <div class="dmg__bar"><span style="--w:78%"></span></div>
+          </div>
+
+          <div class="dmg reveal">
+            <div class="dmg__head">
+              <span><i class="fa-solid fa-shield-virus"></i> Sistema inmune</span>
+              <strong>-31%</strong>
+            </div>
+            <div class="dmg__bar"><span style="--w:69%"></span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- STATS COUNTERS -->
+      <div class="stats">
+        <div class="stat reveal">
+          <div class="stat__num" data-count="2100000">0</div>
+          <div class="stat__label">Jóvenes que vapean en LATAM</div>
+        </div>
+        <div class="stat reveal">
+          <div class="stat__num" data-count="68">0</div>
+          <div class="stat__label">% que desarrolla dependencia en &lt;6 meses</div>
+        </div>
+        <div class="stat reveal">
+          <div class="stat__num" data-count="30">0</div>
+          <div class="stat__label">Sustancias químicas detectadas</div>
+        </div>
+        <div class="stat reveal">
+          <div class="stat__num" data-count="5">0</div>
+          <div class="stat__label">x más probable empezar a fumar después</div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================== -->
+    <!-- 4. EFECTOS — físicos / emocionales               -->
+    <!-- ============================================== -->
+    <section id="efectos" class="section">
+      <div class="section__head reveal">
+        <span class="section__kicker">03 / Consecuencias</span>
+        <h2 class="section__title">Lo que el vape <span class="grad-purple">no te dice</span></h2>
+        <p class="section__lead">
+          No es solo el pulmón. Es tu mente, tu energía, tus relaciones, tu libertad.
+        </p>
+      </div>
+
+      <div class="split">
+        <div class="split__col reveal">
+          <div class="split__head split__head--blue">
+            <i class="fa-solid fa-bolt"></i>
+            <h3>Físicos</h3>
+          </div>
+          <ul class="ticks">
+            <li><i class="fa-solid fa-circle-exclamation"></i> Tos crónica y dificultad para respirar.</li>
+            <li><i class="fa-solid fa-circle-exclamation"></i> Lesiones pulmonares (EVALI).</li>
+            <li><i class="fa-solid fa-circle-exclamation"></i> Aumento de presión arterial y arritmias.</li>
+            <li><i class="fa-solid fa-circle-exclamation"></i> Daño bucal: encías, dientes, garganta.</li>
+            <li><i class="fa-solid fa-circle-exclamation"></i> Bajo rendimiento físico y deportivo.</li>
+          </ul>
+        </div>
+
+        <div class="split__col reveal">
+          <div class="split__head split__head--purple">
+            <i class="fa-solid fa-brain"></i>
+            <h3>Emocionales / Sociales</h3>
+          </div>
+          <ul class="ticks">
+            <li><i class="fa-solid fa-circle-exclamation"></i> Ansiedad y picos de irritabilidad.</li>
+            <li><i class="fa-solid fa-circle-exclamation"></i> Dependencia que controla tu día.</li>
+            <li><i class="fa-solid fa-circle-exclamation"></i> Presión grupal: vapear para "encajar".</li>
+            <li><i class="fa-solid fa-circle-exclamation"></i> Aislamiento y caída en concentración.</li>
+            <li><i class="fa-solid fa-circle-exclamation"></i> Mayor riesgo de adicciones futuras.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================== -->
+    <!-- 5. JUEGO                                         -->
+    <!-- ============================================== -->
+    <section id="juego" class="section section--alt">
+      <div class="section__head reveal">
+        <span class="section__kicker">04 / Mini juego</span>
+        <h2 class="section__title">Sobrevive al <span class="grad-green">humo</span></h2>
+        <p class="section__lead">
+          Controla tus pulmones. Esquiva los vapes y el humo tóxico. Recolecta oxígeno
+          y elementos saludables. ¿Cuánto puedes resistir?
+        </p>
+      </div>
+
+      <div class="game">
+        <div class="game__hud">
+          <div class="hud-item"><i class="fa-solid fa-star"></i> <span id="hudScore">0</span></div>
+          <div class="hud-item hud-item--lives"><i class="fa-solid fa-heart"></i> <span id="hudLives">3</span></div>
+          <div class="hud-item"><i class="fa-solid fa-gauge-high"></i> Nivel <span id="hudLevel">1</span></div>
+          <div class="hud-item"><i class="fa-solid fa-trophy"></i> Best <span id="hudBest">0</span></div>
+        </div>
+
+        <div class="game__stage">
+          <canvas id="gameCanvas" width="900" height="540"></canvas>
+
+          <!-- start screen -->
+          <div class="game__overlay" id="screenStart">
+            <div class="game__panel">
+              <h3 class="game__panel-title">PULMÓN<span>RUN</span></h3>
+              <p>Mueve con <kbd>←</kbd> <kbd>→</kbd> o <kbd>A</kbd> <kbd>D</kbd>. En móvil, arrastra.</p>
+              <ul class="legend">
+                <li><span class="leg leg--vape"></span> Esquiva vapes</li>
+                <li><span class="leg leg--smoke"></span> Esquiva humo</li>
+                <li><span class="leg leg--o2"></span> Recoge oxígeno (+10)</li>
+                <li><span class="leg leg--apple"></span> Recoge salud (+25)</li>
+              </ul>
+              <button class="btn btn--primary" id="btnStart"><i class="fa-solid fa-play"></i> Jugar</button>
+            </div>
+          </div>
+
+          <!-- game over screen -->
+          <div class="game__overlay hidden" id="screenOver">
+            <div class="game__panel">
+              <h3 class="game__panel-title game__panel-title--red">GAME<span>OVER</span></h3>
+              <p class="game__final">Puntaje final: <strong id="finalScore">0</strong></p>
+              <p class="game__msg" id="finalMsg">Sobreviviste al humo… en la vida real no siempre hay reinicio.</p>
+              <div class="game__name">
+                <input type="text" id="playerName" maxlength="14" placeholder="Tu nombre / alias" />
+                <button class="btn btn--primary" id="btnSave"><i class="fa-solid fa-floppy-disk"></i> Guardar</button>
+              </div>
+              <div class="game__actions">
+                <button class="btn btn--ghost" id="btnRestart"><i class="fa-solid fa-rotate-right"></i> Reiniciar</button>
+                <a href="#ranking" class="btn btn--ghost"><i class="fa-solid fa-trophy"></i> Ver ranking</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- mobile controls -->
+        <div class="game__touch">
+          <button class="touch-btn" id="touchLeft" aria-label="Izquierda"><i class="fa-solid fa-chevron-left"></i></button>
+          <button class="touch-btn" id="touchRight" aria-label="Derecha"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================== -->
+    <!-- 6. RANKING                                       -->
+    <!-- ============================================== -->
+    <section id="ranking" class="section">
+      <div class="section__head reveal">
+        <span class="section__kicker">05 / Leaderboard</span>
+        <h2 class="section__title">Top <span class="grad-blue">supervivientes</span></h2>
+        <p class="section__lead">
+          Los que más resistieron. ¿Puedes superarlos? <em>Recuerda: en la realidad, no
+          hay segunda oportunidad.</em>
+        </p>
+      </div>
+
+      <div class="rank">
+        <div class="rank__podium" id="podium"></div>
+        <ol class="rank__list" id="rankList">
+          <!-- generado por JS -->
+        </ol>
+
+        <div class="rank__empty" id="rankEmpty">
+          <i class="fa-solid fa-trophy"></i>
+          <p>Aún no hay puntajes. ¡Sé el primero en jugar!</p>
+        </div>
+
+        <div class="rank__actions">
+          <button class="btn btn--ghost" id="btnClearRank">
+            <i class="fa-solid fa-trash"></i> Limpiar ranking
+          </button>
+          <a href="#juego" class="btn btn--primary">
+            <i class="fa-solid fa-gamepad"></i> Jugar de nuevo
+          </a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================== -->
+    <!-- 7. REFLEXIÓN FINAL                               -->
+    <!-- ============================================== -->
+    <section id="reflexion" class="section section--final">
+      <div class="final">
+        <div class="final__eyebrow reveal">
+          <span class="dot dot--red"></span> Mensaje final
+        </div>
+
+        <h2 class="final__title reveal">
+          En la vida real <span class="grad-red">no hay reinicio.</span>
+        </h2>
+
+        <p class="final__text reveal">
+          Cada inhalación es una decisión. Cada decisión moldea tu futuro.
+          El vape promete sabor, pero entrega adicción, daño y silencio.
+          <br/><br/>
+          <strong>Tu mejor jugada empieza fuera del juego.</strong>
+        </p>
+
+        <div class="final__cta reveal">
+          <a href="#juego" class="btn btn--primary">
+            <i class="fa-solid fa-rotate-right"></i> Volver a jugar
+          </a>
+          <button class="btn btn--ghost" id="btnShare">
+            <i class="fa-solid fa-share-nodes"></i> Compartir campaña
+          </button>
+        </div>
+
+        <div class="final__pulse reveal" aria-hidden="true">
+          <div class="pulse"></div>
+          <div class="pulse"></div>
+          <div class="pulse"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================================== -->
+  <!-- FOOTER                                          -->
+  <!-- ============================================== -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <span class="nav__logo"><i class="fa-solid fa-lungs"></i></span>
+        <span class="nav__brand-text">VAPE<span>OFF</span></span>
+      </div>
+      <p class="footer__txt">
+        Campaña digital de concientización · Hecho con conciencia, código y propósito.
+      </p>
+      <p class="footer__small">
+        Si tú o alguien cercano necesita ayuda, busca apoyo profesional.
+        Esta página es informativa y no sustituye consejo médico.
+      </p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
